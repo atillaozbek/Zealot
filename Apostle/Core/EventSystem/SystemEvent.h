@@ -9,7 +9,7 @@ namespace Apostle
 		ResizeEvent
 	};
 
-	class SystemEventBase : EventBase
+	class SystemEventBase : public EventBase
 	{
 	public:
 		SystemEventBase() = delete;
@@ -19,7 +19,7 @@ namespace Apostle
 		SystemEventTypes m_systemEventType;
 	};
 
-	class CloseEvent : SystemEventBase
+	class CloseEvent : public SystemEventBase
 	{
 	public:
 		CloseEvent();
@@ -28,7 +28,7 @@ namespace Apostle
 
 	};
 	
-	class ResizeEvent : SystemEventBase
+	class ResizeEvent : public SystemEventBase
 	{
 	public:
 		ResizeEvent(int width, int height);

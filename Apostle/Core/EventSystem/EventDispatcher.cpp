@@ -3,9 +3,12 @@
 
 namespace Apostle
 {
+	EventDispatcher::EventDispatcher(const LayerStack& layerStack) : m_layerStack(layerStack)
+	{
+	}
 
 	void EventDispatcher::dispatchEvent(EventBase&& event)
 	{
-		std::cout << event.toString() << std::endl;
+		m_layerStack.processEvent(event);
 	}
 }

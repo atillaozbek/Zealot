@@ -9,7 +9,7 @@ namespace Apostle
 	class GLFWWindow : public WindowBase
 	{
 	public:
-		GLFWWindow(int width, int height, const std::string& windowName);
+		GLFWWindow(int width, int height, const std::string& windowName, EventDispatcher& dispcather);
 		~GLFWWindow();
 		void OnUpdate() override;
 		int shouldClose() override;
@@ -29,6 +29,6 @@ namespace Apostle
 		static void windowSizeCallback(GLFWwindow* window, int width, int height);
 
 		GLFWwindow* m_window;
-		EventDispatcher dispatcher;
+		EventDispatcher& m_dispatcher;
 	};
 }

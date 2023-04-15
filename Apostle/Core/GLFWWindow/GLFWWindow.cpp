@@ -7,8 +7,8 @@
 
 namespace Apostle
 {
-	GLFWWindow::GLFWWindow(int width, int height, const std::string& windowName) :
-		WindowBase(width, height, windowName)
+	GLFWWindow::GLFWWindow(int width, int height, const std::string& windowName, EventDispatcher& dispatcher) :
+		WindowBase(width, height, windowName), m_dispatcher(dispatcher)
 	{
 		/* Initialize the library */
 		if (!glfwInit()) {
@@ -50,34 +50,31 @@ namespace Apostle
 	{
 		GLFWWindow* windowGLFW = (GLFWWindow*)glfwGetWindowUserPointer(window);
 
-		windowGLFW->dispatcher.dispatchEvent(KeyboardEvent(KeyboardEventTypes::Press, key));
+		windowGLFW->m_dispatcher.dispatchEvent(KeyboardEvent(KeyboardEventTypes::Press, key));
 		
 	}
 
 	void GLFWWindow::cursorPositionCallback(GLFWwindow* window, double xpos, double ypos)
 	{
 		GLFWWindow* windowGLFW = (GLFWWindow*)glfwGetWindowUserPointer(window);
-		//GLFWWindow->m_eventSystem->SignalEvent(MouseCursorMoveEvent(xpos, ypos));
+		windowGLFW->m_dispatcher.dispatchEvent(MouseCursorEvent(xpos, ypos));
 	}
 
 	void GLFWWindow::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
 	{
-		//GLFWWindow* windowGLFW = (GLFWWindow*)glfwGetWindowUserPointer(window);
-
-		
-
+		GLFWWindow* windowGLFW = (GLFWWindow*)glfwGetWindowUserPointer(window);
+		windowGLFW->m_dispatcher.dispatchEvent(MouseButtonEvent(button));
 	}
 
 	void GLFWWindow::mouseScrollCallback(GLFWwindow* window, double xOffset, double yOffset)
 	{
-		GLFWWindow* windowGLFW = (GLFWWindow*)glfwGetWindowUserPointer(window);
+		//GLFWWindow* windowGLFW = (GLFWWindow*)glfwGetWindowUserPointer(window);
 	}
 
 	void GLFWWindow::windowCloseCallback(GLFWwindow* window)
 	{
-		//GLFWWindow* windowGLFW = (GLFWWindow*)glfwGetWindowUserPointer(window);
-
-		
+		GLFWWindow* windowGLFW = (GLFWWindow*)glfwGetWindowUserPointer(window);
+		windowGLFW->m_dispatcher.dispatchEvent(CloseEvent());
 	}
 
 	void GLFWWindow::windowSizeCallback(GLFWwindow* window, int width, int height)
@@ -88,6 +85,8 @@ namespace Apostle
 
 		windowGLFW->m_windowWidth = width;
 		windowGLFW->m_windowHeight = height;
+
+		windowGLFW->m_dispatcher.dispatchEvent(ResizeEvent(width, height));
 	}
 
 	void GLFWWindow::OnUpdate()

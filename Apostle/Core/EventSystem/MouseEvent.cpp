@@ -21,7 +21,7 @@ namespace Apostle
 
 	std::string MouseButtonEvent::toString()
 	{
-		return "Mouse Event: Button " + std::to_string(m_button) + "is pressed.";
+		return "Mouse Event: Button " + std::to_string(m_button) + " is pressed.";
 	}
 
 	MouseCursorEvent::MouseCursorEvent(double xpos, double ypos) : MouseEventBase(MouseEventTypes::MouseCursorEvent), m_xpos(xpos), m_ypos(ypos)

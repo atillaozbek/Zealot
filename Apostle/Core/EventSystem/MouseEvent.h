@@ -9,7 +9,7 @@ namespace Apostle
 		MouseCursorEvent
 	};
 
-	class MouseEventBase : EventBase
+	class MouseEventBase : public EventBase
 	{
 	public:
 		MouseEventBase() = delete;
@@ -21,7 +21,7 @@ namespace Apostle
 		MouseEventTypes m_mouseEventType;
 	};
 
-	class MouseButtonEvent : MouseEventBase
+	class MouseButtonEvent : public MouseEventBase
 	{
 	public:
 		MouseButtonEvent(int button);
@@ -31,7 +31,7 @@ namespace Apostle
 		int m_button;
 	};
 
-	class MouseCursorEvent : MouseEventBase
+	class MouseCursorEvent : public MouseEventBase
 	{
 	public:
 		MouseCursorEvent(double xpos, double ypos);
