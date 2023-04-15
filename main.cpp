@@ -27,6 +27,5 @@ int main()
 		window.OnUpdate();
 	}
 
-
 	return 0;
 }
