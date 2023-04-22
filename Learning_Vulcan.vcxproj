@@ -172,12 +172,15 @@
     <None Include="Shaders\Vertex.vert" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Apostle\Core\Apostle.h" />
+    <ClInclude Include="Apostle\Core\ApostleCore.h" />
     <ClInclude Include="Apostle\Core\EventSystem\EventBase.h" />
     <ClInclude Include="Apostle\Core\EventSystem\EventDispatcher.h" />
     <ClInclude Include="Apostle\Core\EventSystem\KeyboardEvents.h" />
     <ClInclude Include="Apostle\Core\EventSystem\MouseEvent.h" />
     <ClInclude Include="Apostle\Core\EventSystem\SystemEvent.h" />
     <ClInclude Include="Apostle\Core\GLFWWindow\GLFWWindow.h" />
+    <ClInclude Include="Apostle\Core\InputDefs.h" />
     <ClInclude Include="Apostle\Core\LayerSystem\DebugLayer.h" />
     <ClInclude Include="Apostle\Core\LayerSystem\LayerBase.h" />
     <ClInclude Include="Apostle\Core\LayerSystem\LayerStack.h" />
