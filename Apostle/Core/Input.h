@@ -13,6 +13,11 @@ namespace Apostle {
 
 		void updateKey(KEYCODES key);
 		void updateButton(MOUSEBUTTONCODES button);
+		void updateCursorPositions(double posX, double posY);
+		double getCursorPosX();
+		double getCursorPosY();
+		double getCursorOffsetX();
+		double getCursorOffsetY();
 		void onUpdate();
 
 	private:
