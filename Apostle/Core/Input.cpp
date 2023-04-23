@@ -39,32 +39,6 @@ namespace Apostle {
 		m_currentButton = button;
 	}
 
-	void Input::updateCursorPositions(double posX, double posY)
-	{
-		m_currentCursorPosX = posX;
-		m_currentCursorPosY = posY;
-	}
-
-	double Input::getCursorPosX()
-	{
-		return m_currentCursorPosX;
-	}
-
-	double Input::getCursorPosY()
-	{
-		return m_currentCursorPosY;
-	}
-
-	double Input::getCursorOffsetX()
-	{
-		return m_offSetCursorX;
-	}
-
-	double Input::getCursorOffsetY()
-	{
-		return m_offSetCursorY;
-	}
-
 	void Input::onUpdate()
 	{
 		m_previousKey = m_currentKey;
@@ -76,4 +50,5 @@ namespace Apostle {
 		m_offSetCursorX = m_currentCursorPosX - m_previousCursorPosX;
 		m_offSetCursorX = m_currentCursorPosY - m_previousCursorPosY;
 	}
+
 }
