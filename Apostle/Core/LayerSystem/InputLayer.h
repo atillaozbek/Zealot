@@ -10,6 +10,7 @@ namespace Apostle
 	{
 	public:
 		InputLayer(Input& input);
+		
 
 		void processEvent(EventBase& event) override;
 		void onInsert() override;

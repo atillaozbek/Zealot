@@ -4,6 +4,7 @@ namespace Apostle
 {
 	InputLayer::InputLayer(Input& input) : m_input(input)
 	{
+
 	}
 	void InputLayer::processEvent(EventBase& event)
 	{

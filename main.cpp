@@ -3,6 +3,7 @@
 #include "Apostle/Core/LinearAlgebra.h"
 #include "EventSystem/EventDispatcher.h"
 #include "LayerSystem/LayerStack.h"
+#include "LayerSystem/Inputlayer.h"
 #include "LayerSystem/DebugLayer.h"
 #include "Vector3D.h"
 #include <iostream>
@@ -14,9 +15,11 @@ int main()
 
 {
 	Apostle::LayerStack layerStack;
-
+	Apostle::Input input;
+	
 #ifdef EVENT_DEBUG
 	layerStack.insertLayer(std::make_shared<Apostle::DebugLayer>());
+	layerStack.insertLayer(std::make_shared<Apostle::InputLayer>(input));
 #endif
 
 	Apostle::EventDispatcher dispatcher(layerStack);
