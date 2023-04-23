@@ -54,6 +54,9 @@
     <ClCompile Include="Apostle\Core\Input.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Apostle\Core\LayerSystem\InputLayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\Vertex.vert" />
@@ -109,6 +112,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Apostle\Core\Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Apostle\Core\LayerSystem\InputLayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
