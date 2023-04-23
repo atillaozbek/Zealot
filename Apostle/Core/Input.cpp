@@ -31,12 +31,12 @@ namespace Apostle {
 
 	void Input::updateKey(KEYCODES key)
 	{
-		
+		m_currentKey = key;
 	}
 
 	void Input::updateButton(MOUSEBUTTONCODES button)
 	{
-
+		m_currentButton = button;
 	}
 
 	void Input::onUpdate()

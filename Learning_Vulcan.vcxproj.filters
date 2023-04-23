@@ -1,115 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
+    <ClCompile Include="Apostle\Core\EventSystem\EventBase.cpp" />
+    <ClCompile Include="Apostle\Core\EventSystem\EventDispatcher.cpp" />
+    <ClCompile Include="Apostle\Core\EventSystem\KeyboardEvents.cpp" />
+    <ClCompile Include="Apostle\Core\EventSystem\MouseEvent.cpp" />
+    <ClCompile Include="Apostle\Core\EventSystem\SystemEvent.cpp" />
+    <ClCompile Include="Apostle\Core\GLFWWindow\GLFWWindow.cpp" />
+    <ClCompile Include="Apostle\Core\Input.cpp" />
+    <ClCompile Include="Apostle\Core\LayerSystem\DebugLayer.cpp" />
+    <ClCompile Include="Apostle\Core\LayerSystem\InputLayer.cpp" />
+    <ClCompile Include="Apostle\Core\LayerSystem\LayerStack.cpp" />
+    <ClCompile Include="Apostle\Core\Vector2D.cpp" />
+    <ClCompile Include="Apostle\Core\Vector3D.cpp" />
+    <ClCompile Include="Apostle\Core\Windowing\WindowBase.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Apostle\Core\LinearAlgebra.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Apostle\Core\Windowing\WindowBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Apostle\Core\GLFWWindow\GLFWWindow.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Apostle\Core\EventSystem\EventBase.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Apostle\Core\EventSystem\KeyboardEvents.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Apostle\Core\EventSystem\MouseEvent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Apostle\Core\EventSystem\SystemEvent.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Apostle\Core\EventSystem\EventDispatcher.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Apostle\Core\LayerSystem\DebugLayer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Apostle\Core\LayerSystem\LayerStack.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Apostle\Core\Vector3D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Apostle\Core\Vector2D.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Apostle\Core\Input.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <ClInclude Include="Apostle\Core\Apostle.h" />
+    <ClInclude Include="Apostle\Core\ApostleCore.h" />
+    <ClInclude Include="Apostle\Core\EventSystem\EventBase.h" />
+    <ClInclude Include="Apostle\Core\EventSystem\EventDispatcher.h" />
+    <ClInclude Include="Apostle\Core\Input.h" />
+    <ClInclude Include="Apostle\Core\EventSystem\KeyboardEvents.h" />
+    <ClInclude Include="Apostle\Core\EventSystem\MouseEvent.h" />
+    <ClInclude Include="Apostle\Core\EventSystem\SystemEvent.h" />
+    <ClInclude Include="Apostle\Core\GLFWWindow\GLFWWindow.h" />
+    <ClInclude Include="Apostle\Core\Vector2D.h" />
+    <ClInclude Include="Apostle\Core\Vector3D.h" />
+    <ClInclude Include="Apostle\Core\InputDefs.h" />
+    <ClInclude Include="Apostle\Core\LayerSystem\DebugLayer.h" />
+    <ClInclude Include="Apostle\Core\LayerSystem\InputLayer.h" />
+    <ClInclude Include="Apostle\Core\LayerSystem\LayerBase.h" />
+    <ClInclude Include="Apostle\Core\LayerSystem\LayerStack.h" />
+    <ClInclude Include="Apostle\Core\Windowing\WindowBase.h" />
+    <ClInclude Include="Apostle\Core\LinearAlgebra.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shaders\Vertex.vert" />
     <None Include="Shaders\Fragment.frag" />
-    <None Include="Shaders\ShaderCompile.bat">
-      <Filter>Source Files</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Apostle\Core\Windowing\WindowBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\GLFWWindow\GLFWWindow.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\EventSystem\EventBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\EventSystem\KeyboardEvents.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\EventSystem\MouseEvent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\EventSystem\SystemEvent.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\EventSystem\EventDispatcher.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\LayerSystem\LayerBase.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\LayerSystem\DebugLayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\LayerSystem\LayerStack.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\InputDefs.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\ApostleCore.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\Apostle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\Vector3D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\Vector2D.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Apostle\Core\Input.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
+    <None Include="Shaders\ShaderCompile.bat" />
+    <None Include="Shaders\Vertex.vert" />
   </ItemGroup>
 </Project>

@@ -165,6 +165,7 @@
     <ClCompile Include="Apostle\Core\LayerSystem\DebugLayer.cpp" />
     <ClCompile Include="Apostle\Core\LayerSystem\InputLayer.cpp" />
     <ClCompile Include="Apostle\Core\LayerSystem\LayerStack.cpp" />
+    <ClCompile Include="Apostle\Core\LinearAlgebra.cpp" />
     <ClCompile Include="Apostle\Core\Vector2D.cpp" />
     <ClCompile Include="Apostle\Core\Vector3D.cpp" />
     <ClCompile Include="Apostle\Core\Windowing\WindowBase.cpp" />
@@ -185,6 +186,7 @@
     <ClInclude Include="Apostle\Core\EventSystem\MouseEvent.h" />
     <ClInclude Include="Apostle\Core\EventSystem\SystemEvent.h" />
     <ClInclude Include="Apostle\Core\GLFWWindow\GLFWWindow.h" />
+    <ClInclude Include="Apostle\Core\LinearAlgebra.h" />
     <ClInclude Include="Apostle\Core\Vector2D.h" />
     <ClInclude Include="Apostle\Core\Vector3D.h" />
     <ClInclude Include="Apostle\Core\InputDefs.h" />
