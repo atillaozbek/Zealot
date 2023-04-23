@@ -163,6 +163,7 @@
     <ClCompile Include="Apostle\Core\GLFWWindow\GLFWWindow.cpp" />
     <ClCompile Include="Apostle\Core\Input.cpp" />
     <ClCompile Include="Apostle\Core\LayerSystem\DebugLayer.cpp" />
+    <ClCompile Include="Apostle\Core\LayerSystem\InputLayer.cpp" />
     <ClCompile Include="Apostle\Core\LayerSystem\LayerStack.cpp" />
     <ClCompile Include="Apostle\Core\Vector2D.cpp" />
     <ClCompile Include="Apostle\Core\Vector3D.cpp" />
@@ -188,6 +189,7 @@
     <ClInclude Include="Apostle\Core\Vector3D.h" />
     <ClInclude Include="Apostle\Core\InputDefs.h" />
     <ClInclude Include="Apostle\Core\LayerSystem\DebugLayer.h" />
+    <ClInclude Include="Apostle\Core\LayerSystem\InputLayer.h" />
     <ClInclude Include="Apostle\Core\LayerSystem\LayerBase.h" />
     <ClInclude Include="Apostle\Core\LayerSystem\LayerStack.h" />
     <ClInclude Include="Apostle\Core\Windowing\WindowBase.h" />
