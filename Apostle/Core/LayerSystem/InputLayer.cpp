@@ -6,6 +6,7 @@ namespace Apostle
 	{
 
 	}
+
 	void InputLayer::processEvent(EventBase& event)
 	{
 		EventTypes type = event.getType();
