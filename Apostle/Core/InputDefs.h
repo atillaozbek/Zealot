@@ -1,11 +1,9 @@
 #pragma once
-
-#pragma once
 #include "Apostle.h"
 
 #ifdef GLFW_WINDOWING_SYSTEM 
 
-namespace Mithril
+namespace Apostle
 {
 	/*Key values for GLFW Windowing API*/
 	enum class KEYCODES : int
@@ -138,7 +136,7 @@ namespace Mithril
 
 
 	/*Defining Mouse values for GLFW Windowing API/*/
-	enum class MOUSECODES : int
+	enum class MOUSEBUTTONCODES : int
 	{
 		APOSTLE_MOUSE_BUTTON_NONE = -1,
 		APOSTLE_MOUSE_BUTTON_1 = GLFW_MOUSE_BUTTON_1,

@@ -161,8 +161,11 @@
     <ClCompile Include="Apostle\Core\EventSystem\MouseEvent.cpp" />
     <ClCompile Include="Apostle\Core\EventSystem\SystemEvent.cpp" />
     <ClCompile Include="Apostle\Core\GLFWWindow\GLFWWindow.cpp" />
+    <ClCompile Include="Apostle\Core\Input.cpp" />
     <ClCompile Include="Apostle\Core\LayerSystem\DebugLayer.cpp" />
     <ClCompile Include="Apostle\Core\LayerSystem\LayerStack.cpp" />
+    <ClCompile Include="Apostle\Core\Vector2D.cpp" />
+    <ClCompile Include="Apostle\Core\Vector3D.cpp" />
     <ClCompile Include="Apostle\Core\Windowing\WindowBase.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -176,10 +179,13 @@
     <ClInclude Include="Apostle\Core\ApostleCore.h" />
     <ClInclude Include="Apostle\Core\EventSystem\EventBase.h" />
     <ClInclude Include="Apostle\Core\EventSystem\EventDispatcher.h" />
+    <ClInclude Include="Apostle\Core\Input.h" />
     <ClInclude Include="Apostle\Core\EventSystem\KeyboardEvents.h" />
     <ClInclude Include="Apostle\Core\EventSystem\MouseEvent.h" />
     <ClInclude Include="Apostle\Core\EventSystem\SystemEvent.h" />
     <ClInclude Include="Apostle\Core\GLFWWindow\GLFWWindow.h" />
+    <ClInclude Include="Apostle\Core\Vector2D.h" />
+    <ClInclude Include="Apostle\Core\Vector3D.h" />
     <ClInclude Include="Apostle\Core\InputDefs.h" />
     <ClInclude Include="Apostle\Core\LayerSystem\DebugLayer.h" />
     <ClInclude Include="Apostle\Core\LayerSystem\LayerBase.h" />

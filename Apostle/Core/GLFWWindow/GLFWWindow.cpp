@@ -1,6 +1,7 @@
 #include "Apostle/Core/Windowing/WindowBase.h"
 #include "GLFWWindow.h"
 #include <iostream>
+#include <InputDefs.h>
 #include "Apostle/Core/EventSystem/KeyboardEvents.h"
 #include "Apostle/Core/EventSystem/MouseEvent.h"
 #include "Apostle/Core/EventSystem/SystemEvent.h"
@@ -50,7 +51,7 @@ namespace Apostle
 	{
 		GLFWWindow* windowGLFW = (GLFWWindow*)glfwGetWindowUserPointer(window);
 
-		windowGLFW->m_dispatcher.dispatchEvent(KeyboardEvent(KeyboardEventTypes::Press, key));
+		windowGLFW->m_dispatcher.dispatchEvent(KeyboardEvent(KeyboardEventTypes::Press, static_cast<KEYCODES>(key)));
 		
 	}
 
@@ -63,7 +64,7 @@ namespace Apostle
 	void GLFWWindow::mouseButtonCallback(GLFWwindow* window, int button, int action, int mods)
 	{
 		GLFWWindow* windowGLFW = (GLFWWindow*)glfwGetWindowUserPointer(window);
-		windowGLFW->m_dispatcher.dispatchEvent(MouseButtonEvent(button));
+		windowGLFW->m_dispatcher.dispatchEvent(MouseButtonEvent(static_cast<MOUSEBUTTONCODES>(button)));
 	}
 
 	void GLFWWindow::mouseScrollCallback(GLFWwindow* window, double xOffset, double yOffset)
@@ -106,7 +107,7 @@ namespace Apostle
 		glfwSetWindowShouldClose(m_window, 1);
 	}
 
-	bool GLFWWindow::IsKeyPressed(int key)
+	bool GLFWWindow::IsKeyPressed(KEYCODES key)
 	{
 		return glfwGetKey(m_window, static_cast<int>(key)) == GLFW_PRESS;
 	}

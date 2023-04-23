@@ -14,7 +14,7 @@ namespace Apostle
 		void OnUpdate() override;
 		int shouldClose() override;
 		void SetToClose() override;
-		bool IsKeyPressed(int key) override;
+		bool IsKeyPressed(KEYCODES key) override;
 		const float GetTime() override;
 		void UnlockCursor() override;
 		void LockCursor() override;

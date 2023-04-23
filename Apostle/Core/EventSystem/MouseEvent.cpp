@@ -10,18 +10,18 @@ namespace Apostle
 		return m_mouseEventType;
 	}
 
-	MouseButtonEvent::MouseButtonEvent(int button) : MouseEventBase(MouseEventTypes::MouseButtonEvent), m_button(button)
+	MouseButtonEvent::MouseButtonEvent(MOUSEBUTTONCODES button) : MouseEventBase(MouseEventTypes::MouseButtonEvent), m_button(button)
 	{
 	}
 
-	int MouseButtonEvent::getButton()
+	MOUSEBUTTONCODES MouseButtonEvent::getButton()
 	{
 		return m_button;
 	}
 
 	std::string MouseButtonEvent::toString()
 	{
-		return "Mouse Event: Button " + std::to_string(m_button) + " is pressed.";
+		return "Mouse Event: Button " + std::to_string(static_cast<int>(m_button)) + " is pressed.";
 	}
 
 	MouseCursorEvent::MouseCursorEvent(double xpos, double ypos) : MouseEventBase(MouseEventTypes::MouseCursorEvent), m_xpos(xpos), m_ypos(ypos)

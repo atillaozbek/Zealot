@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-
+#include <InputDefs.h>
 //Abstract window class
 //Every concrete window class needs to implement this 
 
@@ -18,7 +18,7 @@ namespace Apostle
 		virtual void LockCursor() = 0;
 		virtual void MakeContextCurrent() = 0;
 		virtual void OnUpdate() = 0;
-		virtual bool IsKeyPressed(int key) = 0;
+		virtual bool IsKeyPressed(KEYCODES key) = 0;
 	protected:
 		unsigned int m_windowWidth;
 		unsigned int m_windowHeight;

@@ -1,5 +1,6 @@
 #pragma once
 #include "EventBase.h"
+#include "InputDefs.h"
 
 namespace Apostle
 {
@@ -24,11 +25,11 @@ namespace Apostle
 	class MouseButtonEvent : public MouseEventBase
 	{
 	public:
-		MouseButtonEvent(int button);
-		int getButton();
+		MouseButtonEvent(MOUSEBUTTONCODES button);
+		MOUSEBUTTONCODES getButton();
 		std::string toString() override;
 	private:
-		int m_button;
+		MOUSEBUTTONCODES m_button;
 	};
 
 	class MouseCursorEvent : public MouseEventBase

@@ -1,5 +1,6 @@
 #pragma once
 #include "EventBase.h"
+#include "InputDefs.h"
 
 namespace Apostle
 {
@@ -13,13 +14,13 @@ namespace Apostle
 	class KeyboardEvent : public EventBase
 	{
 	public:
-		KeyboardEvent(KeyboardEventTypes keyboardEventType, int key);
+		KeyboardEvent(KeyboardEventTypes keyboardEventType, KEYCODES key);
 		KeyboardEventTypes getKeyboardEventType();
-		int getKey();
+		KEYCODES getKey();
 		std::string toString() override;
 	
 	private:
 		KeyboardEventTypes m_KeyboardEventType;
-		int m_key;
+		KEYCODES m_key;
 	};
 }
