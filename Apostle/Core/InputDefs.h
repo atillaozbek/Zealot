@@ -5,7 +5,7 @@
 
 #ifdef GLFW_WINDOWING_SYSTEM 
 
-namespace Mithril
+namespace Apostle
 {
 	/*Key values for GLFW Windowing API*/
 	enum class KEYCODES : int
